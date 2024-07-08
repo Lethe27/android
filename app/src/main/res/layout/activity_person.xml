@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+    <!--标题栏-->
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:onClick="back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_back"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:layout_centerInParent="true"
+            android:textSize="16dp"
+            android:text="个人信息"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@drawable/bg_border_bottom">
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="账号"/>
+            <TextView
+                android:id="@+id/tv_account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@null"
+                android:textSize="14dp"
+                android:text=""/>
+        </LinearLayout>
+        <!--昵称-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_bottom"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:orientation="horizontal">
+            <!--TextView 文本  html的p标签-->
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="昵称"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/et_nickName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@null"
+                android:textSize="14dp"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:hint="请输入昵称" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_bottom"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="horizontal">
+            <!--TextView 文本  html的p标签-->
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="性别"
+                android:textSize="14dp" />
+            <RadioGroup
+                android:id="@+id/rg_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:textSize="14dp"
+                    android:text="男"/>
+                <RadioButton
+                    android:id="@+id/rb_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="女"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_bottom"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:orientation="horizontal">
+            <!--TextView 文本  html的p标签-->
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="手机号"
+                android:textSize="14dp" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@null"
+                android:textSize="14dp"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:hint="请输入手机号" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_border_bottom"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:orientation="horizontal">
+            <!--TextView 文本  html的p标签-->
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="简介"
+                android:textSize="14dp" />
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@null"
+                android:textSize="14dp"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:hint="请输入简介" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:background="@drawable/btn_border_fill"
+            android:textSize="18dp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+</LinearLayout>
